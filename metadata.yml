@@ -1,0 +1,12 @@
+---
+:id: 141693402
+:submitters:
+- :name: Lindsay Kirschner
+  :email: lck32@pitt.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2022-10-18 04:02:21.649478000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2022-10-17 21:02:21.649478000 Z
+:status: processed
+:score: 75.0
