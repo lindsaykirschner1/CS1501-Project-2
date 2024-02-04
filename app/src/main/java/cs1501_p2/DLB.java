@@ -15,6 +15,9 @@ public class DLB implements Dict    {
     //This will be for the by-char search
     String nextChar;
 
+    //Special constant for suggestRecursive, keeps track of what level in the DLB we're on
+    private int suggestRecursiveLevel = 1;
+
     //The root of the DLB & the current node
     //cur will be used for traversal :p
     public DLBNode root;
@@ -332,7 +335,12 @@ public class DLB implements Dict    {
 
         //set nextChar to null
         nextChar = "";
+
+        //set level counter back to 1
+        suggestRecursiveLevel = 1;
     }
+
+    /*
 
     public ArrayList<String> suggest(){
         //Suggest up to 5 words from the dictionary based on the current
@@ -402,6 +410,128 @@ public class DLB implements Dict    {
         return suggestions;
     }
 
+    */
+
+   public ArrayList<String> suggest(){
+        //Suggest up to 5 words from the dictionary based on the current
+        //by-character search.  Ordering should depend on the implementation.
+        //returns a list of up to 5 words that are prefixed by
+        //the current by-character search
+
+        //Check to make sure the DLB has something in it
+        if (traverse == null)
+            return null;
+
+        ArrayList<String> suggestions = new ArrayList<String>(5);
+
+        //Go to & return the recursive helper function
+
+        return (suggestRecursive(suggestions, nextChar, traverse, suggestRecursiveLevel));
+    }
+
+    private ArrayList<String> suggestRecursive(ArrayList<String> suggestions, String nextChar, DLBNode traverse, int suggestRecursiveLevel){
+
+        //If our array list is full, return what we have
+        if (suggestions.size() == 5)
+            return suggestions;
+
+        //There's at least SOMETHING that we can return...
+
+        System.out.println("Current node letter is " + traverse.getLet());
+
+        //System.out.println("Checking whether " + nextChar + " is a prefix or word");
+
+        //If the by-char search is a prefix OR word...
+        if (containsPrefix(nextChar) == true || contains(nextChar) == true)   {
+
+            //System.out.println(nextChar + " is a prefix or word");
+
+            //Special case -- if we're entering the recursive function on the first "level" of the DLB
+            if (suggestRecursiveLevel == 1 && nextChar.length() == 1) {
+
+                suggestRecursiveLevel += 1;
+                
+                //If the down is not a *, just move down and recurse
+
+                //System.out.println("About to enter special if 1, traverse.getDown.getLet is " + traverse.getDown().getLet());
+
+                if (traverse.getDown().getLet() != '*')  {
+
+                    //System.out.println(nextChar + " entered special if 1, traversing down");
+
+                    suggestRecursive(suggestions, nextChar, (traverse.getDown()), suggestRecursiveLevel);
+                }
+
+                //If the down is a * and suggestions isnt full, add that word to suggestions
+                if (traverse.getDown().getLet() == '*' && suggestions.size() < 5) {
+
+                    //System.out.println(nextChar + " entered special if 2, adding to suggestions");
+
+                    if (contains(nextChar) == true)    {
+                        suggestions.add(suggestions.size(), nextChar);
+                    }
+
+                    //then check to see if that word is a prefix. If so, traverse down right
+                    if (traverse.getDown().getRight() != null)   {
+
+                        //System.out.println(nextChar + " entered special if 3, traversing down and right");
+
+                        suggestRecursive(suggestions, nextChar, traverse.getDown().getRight(), suggestRecursiveLevel);
+                    }
+                }
+            }
+
+            else {
+
+                //If the down is not a *, just move down, add nextChar, and recurse
+                if (traverse.getDown().getLet() != '*')  {
+
+                    //System.out.println(nextChar + " entered if 1, adding " + traverse.getLet() + " and traversing down");
+
+                    nextChar += traverse.getLet();
+                    suggestRecursive(suggestions, nextChar, (traverse.getDown()), suggestRecursiveLevel);
+                }
+                
+                //If the down is a * and suggestions isnt full, add that word to suggestions
+                if (traverse.getDown().getLet() == '*' && suggestions.size() < 5) {
+
+                    //System.out.println(nextChar + " entered if 2, adding " + traverse.getLet() + " and adding to suggestions");
+
+                    nextChar += traverse.getLet();
+                    if (contains(nextChar) == true)    {
+                        suggestions.add(suggestions.size(), nextChar);
+                    }
+
+                    //then check to see if that word is a prefix. If so, traverse down right
+                    if (traverse.getDown().getRight() != null)   {
+
+                        //System.out.println(nextChar + " entered if 3, traversing down and right");
+
+                        suggestRecursive(suggestions, nextChar, traverse.getDown().getRight(), suggestRecursiveLevel);
+                    }
+                }
+
+                //We should only get to this point in the recursion if
+                //We have to travel right before going down again
+
+                if (traverse.getRight() != null) {
+                    //sub the char we were at
+
+                    //System.out.println(nextChar + " entered if 4, subtracting " + traverse.getLet() + " from " + nextChar + " and traversing right");
+
+                    nextChar = nextChar.substring(0, nextChar.length() - 1);
+                    suggestRecursive(suggestions, nextChar, traverse.getRight(), suggestRecursiveLevel);
+                }
+            }
+        }
+
+        suggestRecursiveLevel = 2;
+
+        //return the populated suggestion array list
+        return suggestions;
+    }
+
+
     public ArrayList<String> traverse(){
         //List of all the words currently stored in the dictionary
         //returns a list of all valid words in the dictionary
@@ -452,7 +582,7 @@ public class DLB implements Dict    {
             traverseRecursive(traversal, cur.getRight(), root, word);
         }
 
-        //return the array list we have so far
+        //return the array list
         return traversal;
     }
 

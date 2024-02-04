@@ -21,16 +21,19 @@ public class App {
 			ac = new AutoCompleter(eng_dict_fname);
 		}
 
+		printPredictions(ac, 'g');
+		printPredictions(ac, 'y');
+		printPredictions(ac, 'm');
+		printPredictions(ac, 'n');
+		printPredictions(ac, 'a');
+		printPredictions(ac, 's');
 		printPredictions(ac, 't');
-		printPredictions(ac, 'h');
-		printPredictions(ac, 'e');
-		printPredictions(ac, 'r');
-		printPredictions(ac, 'e');
 
-		String word = "thereabout";
+		String word = "gymnast";
 		System.out.printf("Selected: %s\n\n", word);
 		ac.finishWord(word);
 
+		/*
 		printPredictions(ac, 't');
 		printPredictions(ac, 'h');
 		printPredictions(ac, 'e');
@@ -38,6 +41,8 @@ public class App {
 		printPredictions(ac, 'e');		
 
 		ac.saveUserHistory(uhist_state_fname);
+
+		*/
 	}
 
 	private static void printPredictions(AutoCompleter ac, char next) {

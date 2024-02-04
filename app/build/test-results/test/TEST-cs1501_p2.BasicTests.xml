@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cs1501_p2.BasicTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-02-03T21:41:17" hostname="codespaces-efb28e" time="0.324">
+  <properties/>
+  <testcase name="Testing DLB" classname="cs1501_p2.BasicTests" time="0.19"/>
+  <testcase name="Testing AutoCompleter" classname="cs1501_p2.BasicTests" time="0.118"/>
+  <testcase name="Testing UserHistory" classname="cs1501_p2.BasicTests" time="0.005"/>
+  <system-out><![CDATA[Current node letter is e
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding e and traversing down
+Current node letter is f
+Checking whether de is a prefix or word
+de is a prefix or word
+de entered if 1, adding f and traversing down
+Current node letter is i
+Checking whether def is a prefix or word
+def is a prefix or word
+def entered if 1, adding i and traversing down
+Current node letter is n
+Checking whether defi is a prefix or word
+defi is a prefix or word
+defi entered if 1, adding n and traversing down
+Current node letter is i
+Checking whether defin is a prefix or word
+defin is a prefix or word
+defin entered if 1, adding i and traversing down
+Current node letter is t
+Checking whether defini is a prefix or word
+defini is a prefix or word
+defini entered if 1, adding t and traversing down
+Current node letter is e
+Checking whether definit is a prefix or word
+definit is a prefix or word
+definit entered if 2, adding e and adding to suggestions
+de entered if 4, subtracting e from de and traversing right
+Current node letter is i
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding i and traversing down
+Current node letter is c
+Checking whether di is a prefix or word
+di is a prefix or word
+di entered if 1, adding c and traversing down
+Current node letter is t
+Checking whether dic is a prefix or word
+dic is a prefix or word
+dic entered if 2, adding t and adding to suggestions
+dict entered if 3, traversing down and right
+Current node letter is i
+Checking whether dict is a prefix or word
+dict is a prefix or word
+dict entered if 1, adding i and traversing down
+Current node letter is o
+Checking whether dicti is a prefix or word
+dicti is a prefix or word
+dicti entered if 1, adding o and traversing down
+Current node letter is n
+Checking whether dictio is a prefix or word
+dictio is a prefix or word
+dictio entered if 1, adding n and traversing down
+Current node letter is a
+Checking whether diction is a prefix or word
+diction is a prefix or word
+diction entered if 1, adding a and traversing down
+Current node letter is r
+Checking whether dictiona is a prefix or word
+dictiona is a prefix or word
+dictiona entered if 1, adding r and traversing down
+Current node letter is y
+Checking whether dictionar is a prefix or word
+dictionar is a prefix or word
+dictionar entered if 2, adding y and adding to suggestions
+Current node letter is e
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding e and traversing down
+Current node letter is f
+Checking whether de is a prefix or word
+de is a prefix or word
+de entered if 1, adding f and traversing down
+Current node letter is i
+Checking whether def is a prefix or word
+def is a prefix or word
+def entered if 1, adding i and traversing down
+Current node letter is n
+Checking whether defi is a prefix or word
+defi is a prefix or word
+defi entered if 1, adding n and traversing down
+Current node letter is i
+Checking whether defin is a prefix or word
+defin is a prefix or word
+defin entered if 1, adding i and traversing down
+Current node letter is t
+Checking whether defini is a prefix or word
+defini is a prefix or word
+defini entered if 1, adding t and traversing down
+Current node letter is e
+Checking whether definit is a prefix or word
+definit is a prefix or word
+definit entered if 2, adding e and adding to suggestions
+de entered if 4, subtracting e from de and traversing right
+Current node letter is i
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding i and traversing down
+Current node letter is c
+Checking whether di is a prefix or word
+di is a prefix or word
+di entered if 1, adding c and traversing down
+Current node letter is t
+Checking whether dic is a prefix or word
+dic is a prefix or word
+dic entered if 2, adding t and adding to suggestions
+dict entered if 3, traversing down and right
+Current node letter is i
+Checking whether dict is a prefix or word
+dict is a prefix or word
+dict entered if 1, adding i and traversing down
+Current node letter is o
+Checking whether dicti is a prefix or word
+dicti is a prefix or word
+dicti entered if 1, adding o and traversing down
+Current node letter is n
+Checking whether dictio is a prefix or word
+dictio is a prefix or word
+dictio entered if 1, adding n and traversing down
+Current node letter is a
+Checking whether diction is a prefix or word
+diction is a prefix or word
+diction entered if 1, adding a and traversing down
+Current node letter is r
+Checking whether dictiona is a prefix or word
+dictiona is a prefix or word
+dictiona entered if 1, adding r and traversing down
+Current node letter is y
+Checking whether dictionar is a prefix or word
+dictionar is a prefix or word
+dictionar entered if 2, adding y and adding to suggestions
+Current node letter is e
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding e and traversing down
+Current node letter is f
+Checking whether de is a prefix or word
+de is a prefix or word
+de entered if 1, adding f and traversing down
+Current node letter is i
+Checking whether def is a prefix or word
+def is a prefix or word
+def entered if 1, adding i and traversing down
+Current node letter is n
+Checking whether defi is a prefix or word
+defi is a prefix or word
+defi entered if 1, adding n and traversing down
+Current node letter is i
+Checking whether defin is a prefix or word
+defin is a prefix or word
+defin entered if 1, adding i and traversing down
+Current node letter is t
+Checking whether defini is a prefix or word
+defini is a prefix or word
+defini entered if 1, adding t and traversing down
+Current node letter is e
+Checking whether definit is a prefix or word
+definit is a prefix or word
+definit entered if 2, adding e and adding to suggestions
+de entered if 4, subtracting e from de and traversing right
+Current node letter is i
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding i and traversing down
+Current node letter is c
+Checking whether di is a prefix or word
+di is a prefix or word
+di entered if 1, adding c and traversing down
+Current node letter is t
+Checking whether dic is a prefix or word
+dic is a prefix or word
+dic entered if 2, adding t and adding to suggestions
+dict entered if 3, traversing down and right
+Current node letter is i
+Checking whether dict is a prefix or word
+dict is a prefix or word
+dict entered if 1, adding i and traversing down
+Current node letter is o
+Checking whether dicti is a prefix or word
+dicti is a prefix or word
+dicti entered if 1, adding o and traversing down
+Current node letter is n
+Checking whether dictio is a prefix or word
+dictio is a prefix or word
+dictio entered if 1, adding n and traversing down
+Current node letter is a
+Checking whether diction is a prefix or word
+diction is a prefix or word
+diction entered if 1, adding a and traversing down
+Current node letter is r
+Checking whether dictiona is a prefix or word
+dictiona is a prefix or word
+dictiona entered if 1, adding r and traversing down
+Current node letter is y
+Checking whether dictionar is a prefix or word
+dictionar is a prefix or word
+dictionar entered if 2, adding y and adding to suggestions
+Current node letter is e
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding e and traversing down
+Current node letter is f
+Checking whether de is a prefix or word
+de is a prefix or word
+de entered if 1, adding f and traversing down
+Current node letter is i
+Checking whether def is a prefix or word
+def is a prefix or word
+def entered if 1, adding i and traversing down
+Current node letter is n
+Checking whether defi is a prefix or word
+defi is a prefix or word
+defi entered if 1, adding n and traversing down
+Current node letter is i
+Checking whether defin is a prefix or word
+defin is a prefix or word
+defin entered if 1, adding i and traversing down
+Current node letter is t
+Checking whether defini is a prefix or word
+defini is a prefix or word
+defini entered if 1, adding t and traversing down
+Current node letter is e
+Checking whether definit is a prefix or word
+definit is a prefix or word
+definit entered if 2, adding e and adding to suggestions
+de entered if 4, subtracting e from de and traversing right
+Current node letter is i
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding i and traversing down
+Current node letter is c
+Checking whether di is a prefix or word
+di is a prefix or word
+di entered if 1, adding c and traversing down
+Current node letter is t
+Checking whether dic is a prefix or word
+dic is a prefix or word
+dic entered if 2, adding t and adding to suggestions
+dict entered if 3, traversing down and right
+Current node letter is i
+Checking whether dict is a prefix or word
+dict is a prefix or word
+dict entered if 1, adding i and traversing down
+Current node letter is o
+Checking whether dicti is a prefix or word
+dicti is a prefix or word
+dicti entered if 1, adding o and traversing down
+Current node letter is n
+Checking whether dictio is a prefix or word
+dictio is a prefix or word
+dictio entered if 1, adding n and traversing down
+Current node letter is a
+Checking whether diction is a prefix or word
+diction is a prefix or word
+diction entered if 1, adding a and traversing down
+Current node letter is r
+Checking whether dictiona is a prefix or word
+dictiona is a prefix or word
+dictiona entered if 1, adding r and traversing down
+Current node letter is y
+Checking whether dictionar is a prefix or word
+dictionar is a prefix or word
+dictionar entered if 2, adding y and adding to suggestions
+adding 1
+adding 1
+adding 1
+Current node letter is e
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding e and traversing down
+Current node letter is f
+Checking whether de is a prefix or word
+de is a prefix or word
+de entered if 1, adding f and traversing down
+Current node letter is i
+Checking whether def is a prefix or word
+def is a prefix or word
+def entered if 1, adding i and traversing down
+Current node letter is n
+Checking whether defi is a prefix or word
+defi is a prefix or word
+defi entered if 1, adding n and traversing down
+Current node letter is i
+Checking whether defin is a prefix or word
+defin is a prefix or word
+defin entered if 1, adding i and traversing down
+Current node letter is t
+Checking whether defini is a prefix or word
+defini is a prefix or word
+defini entered if 1, adding t and traversing down
+Current node letter is e
+Checking whether definit is a prefix or word
+definit is a prefix or word
+definit entered if 2, adding e and adding to suggestions
+de entered if 4, subtracting e from de and traversing right
+Current node letter is i
+Checking whether d is a prefix or word
+d is a prefix or word
+d entered if 1, adding i and traversing down
+Current node letter is c
+Checking whether di is a prefix or word
+di is a prefix or word
+di entered if 1, adding c and traversing down
+Current node letter is t
+Checking whether dic is a prefix or word
+dic is a prefix or word
+dic entered if 2, adding t and adding to suggestions
+dict entered if 3, traversing down and right
+Current node letter is i
+Checking whether dict is a prefix or word
+dict is a prefix or word
+dict entered if 1, adding i and traversing down
+Current node letter is o
+Checking whether dicti is a prefix or word
+dicti is a prefix or word
+dicti entered if 1, adding o and traversing down
+Current node letter is n
+Checking whether dictio is a prefix or word
+dictio is a prefix or word
+dictio entered if 1, adding n and traversing down
+Current node letter is a
+Checking whether diction is a prefix or word
+diction is a prefix or word
+diction entered if 1, adding a and traversing down
+Current node letter is r
+Checking whether dictiona is a prefix or word
+dictiona is a prefix or word
+dictiona entered if 1, adding r and traversing down
+Current node letter is y
+Checking whether dictionar is a prefix or word
+dictionar is a prefix or word
+dictionar entered if 2, adding y and adding to suggestions
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
